@@ -1,0 +1,60 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero2 from '~/components/widgets/Hero2.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+
+const metadata = {
+  title: 'Business Registration Services',
+};
+
+const features = [
+  {
+    title: 'GST Registration',
+    description: `Complete assistance in GST registration process including application filing, documentation, and liaison with tax authorities. We ensure smooth registration while ensuring compliance with GST regulations.`,
+    icon: 'tabler:receipt-tax',
+  },
+  {
+    title: 'MSME Registration',
+    description: `Expert guidance for MSME registration to help businesses access government schemes and benefits. We handle the entire registration process and documentation requirements.`,
+    icon: 'tabler:building-factory',
+  },
+  {
+    title: 'PAN & TAN Registration',
+    description: `Efficient processing of PAN (Permanent Account Number) and TAN (Tax Deduction Account Number) applications for individuals and businesses. We ensure accurate documentation and swift processing.`,
+    icon: 'tabler:id',
+  },
+  {
+    title: 'Digital Signature Certificate (DSC)',
+    description: `Complete assistance in obtaining Digital Signature Certificates for business compliance needs. We handle the application process and verification requirements for all classes of DSC.`,
+    icon: 'tabler:signature',
+  },
+];
+---
+
+<Layout metadata={metadata}>
+  <Hero2
+    tagline="Registration Services"
+    title="Business Registration Solutions"
+    subtitle="Comprehensive registration services to help establish and legitimize your business operations."
+    actions={[
+      { variant: 'primary', text: 'Contact Us', href: '/contact' },
+      { text: 'Learn More', href: '#features' },
+    ]}
+  />
+
+  <Features2
+    title="Our Registration Services"
+    subtitle="Complete solutions for all your business registration needs"
+    items={features}
+  />
+
+  <div class="px-4 py-16 mx-auto max-w-6xl lg:py-20">
+    <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+      <p class="text-base text-gray-600 md:text-lg dark:text-slate-400">
+        We simplify the complex process of business registrations and ensure all compliance requirements are met. Our
+        team handles the documentation and follow-ups, allowing you to focus on your business operations.
+      </p>
+    </div>
+  </div>
+</Layout>
+

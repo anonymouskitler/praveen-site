@@ -1,0 +1,56 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero2 from '~/components/widgets/Hero2.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+
+const metadata = {
+  title: 'Income Tax Services - Professional Tax Solutions',
+};
+
+const features = [
+  {
+    title: 'Tax Return Filing (ITR)',
+    description: `Comprehensive income tax return filing services for individuals, businesses, and corporations. We ensure accurate filing while maximizing legitimate deductions and maintaining full compliance with tax regulations.`,
+    icon: 'tabler:file-check',
+  },
+  {
+    title: 'E-TDS Returns Filing',
+    description: `Timely and accurate e-TDS return filing services including Form 24Q, 26Q, and 27Q. We handle TDS compliance, reconciliation, and generation of Form 16/16A to ensure seamless tax deduction reporting.`,
+    icon: 'tabler:receipt-tax',
+  },
+  {
+    title: 'Appeals & Representation',
+    description: `Expert representation before Income Tax authorities at various levels including CIT(A), ITAT, and High Courts. We handle tax notices, prepare detailed responses, and represent your case effectively.`,
+    icon: 'tabler:gavel',
+  },
+];
+---
+
+<Layout metadata={metadata}>
+  <Hero2
+    tagline="Income Tax Services"
+    title="Expert Income Tax Solutions"
+    subtitle="Professional income tax services to help you navigate complex tax regulations and ensure compliance while maximizing benefits."
+    actions={[
+      { variant: 'primary', text: 'Contact Us', href: '/contact' },
+      { text: 'Learn More', href: '#features' },
+    ]}
+  />
+
+  <Features2
+    title="Our Income Tax Services"
+    subtitle="Comprehensive tax solutions tailored to your needs"
+    items={features}
+  />
+
+  <div class="px-4 py-16 mx-auto max-w-6xl lg:py-20">
+    <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+      <p class="text-base text-gray-600 md:text-lg dark:text-slate-400">
+        Our experienced team stays updated with the latest tax laws and regulations to provide you with accurate and
+        timely tax services. We focus on minimizing your tax liability while ensuring full compliance with Indian tax
+        laws.
+      </p>
+    </div>
+  </div>
+</Layout>
+

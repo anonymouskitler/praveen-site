@@ -1,0 +1,61 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero2 from '~/components/widgets/Hero2.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+
+const metadata = {
+  title: 'Certificate Attestation Services',
+};
+
+const features = [
+  {
+    title: 'Net Worth Certificate',
+    description: `Professional preparation and attestation of net worth certificates for various purposes including visa applications, bank loans, and statutory requirements. We ensure accurate calculation and proper documentation.`,
+    icon: 'tabler:certificate',
+  },
+  {
+    title: 'Capital Infusion Certificate',
+    description: `Expert attestation services for capital infusion certificates required for regulatory compliance and stakeholder reporting. We verify and certify capital investments with proper documentation.`,
+    icon: 'tabler:cash',
+  },
+  {
+    title: 'Turnover Certificate',
+    description: `Professional attestation of turnover certificates for tender requirements, bank submissions, and other business purposes. We ensure accurate verification of financial data and proper certification.`,
+    icon: 'tabler:chart-arrows',
+  },
+  {
+    title: 'Other Attestation Services',
+    description: `Comprehensive attestation services for various certificates including income certificates, project completion certificates, and other business-related certifications as per specific requirements.`,
+    icon: 'tabler:files',
+  },
+];
+---
+
+<Layout metadata={metadata}>
+  <Hero2
+    tagline="Certificate Attestation"
+    title="Professional Certificate Attestation Services"
+    subtitle="Expert attestation services for various business and personal requirements with assured authenticity and reliability."
+    actions={[
+      { variant: 'primary', text: 'Contact Us', href: '/contact' },
+      { text: 'Learn More', href: '#features' },
+    ]}
+  />
+
+  <Features2
+    title="Our Attestation Services"
+    subtitle="Comprehensive certification and attestation solutions"
+    items={features}
+  />
+
+  <div class="px-4 py-16 mx-auto max-w-6xl lg:py-20">
+    <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+      <p class="text-base text-gray-600 md:text-lg dark:text-slate-400">
+        Our attestation services ensure compliance with regulatory requirements while maintaining the highest standards
+        of professional integrity. We provide quick and reliable certification services backed by thorough verification
+        processes.
+      </p>
+    </div>
+  </div>
+</Layout>
+
