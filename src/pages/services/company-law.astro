@@ -1,0 +1,55 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero2 from '~/components/widgets/Hero2.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+
+const metadata = {
+  title: 'Company Law Services - Corporate Compliance Solutions',
+};
+
+const features = [
+  {
+    title: 'Secretarial Work',
+    description: `Comprehensive company secretarial services including maintenance of statutory registers, minutes books, and other corporate records. We ensure compliance with Companies Act requirements and handle board meeting procedures.`,
+    icon: 'tabler:files',
+  },
+  {
+    title: 'Annual Returns Filing',
+    description: `Timely preparation and filing of annual returns and other statutory forms with the ROC. We handle DIR-3 KYC, DPT returns, and all mandatory filings under the Companies Act 2013.`,
+    icon: 'tabler:calendar-stats',
+  },
+  {
+    title: 'Corporate Governance',
+    description: `Expert guidance on corporate governance matters, board procedures, and compliance requirements. We help maintain proper documentation and ensure adherence to statutory regulations.`,
+    icon: 'tabler:building',
+  },
+];
+---
+
+<Layout metadata={metadata}>
+  <Hero2
+    tagline="Company Law Services"
+    title="Professional Corporate Compliance Solutions"
+    subtitle="Comprehensive company law services to ensure your business maintains perfect compliance with regulatory requirements."
+    actions={[
+      { variant: 'primary', text: 'Contact Us', href: '/contact' },
+      { text: 'Learn More', href: '#features' },
+    ]}
+  />
+
+  <Features2
+    title="Our Company Law Services"
+    subtitle="Expert solutions for all your corporate compliance needs"
+    items={features}
+  />
+
+  <div class="px-4 py-16 mx-auto max-w-6xl lg:py-20">
+    <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+      <p class="text-base text-gray-600 md:text-lg dark:text-slate-400">
+        Our team of experts ensures your company maintains perfect compliance with all statutory requirements under the
+        Companies Act. We provide timely updates and professional guidance for all your corporate governance needs.
+      </p>
+    </div>
+  </div>
+</Layout>
+

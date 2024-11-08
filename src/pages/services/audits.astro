@@ -1,0 +1,64 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Header from '~/components/widgets/Header.astro';
+import Hero2 from '~/components/widgets/Hero2.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+
+const metadata = {
+  title: 'Audit Services - Professional Audit Solutions',
+};
+
+const features = [
+  {
+    title: 'Tax Audits Under Income Tax Act',
+    description: `Comprehensive tax audit services under Section 44AB of the Income Tax Act for businesses with turnover exceeding prescribed limits. We ensure compliance with tax laws while identifying potential tax-saving opportunities.`,
+    icon: 'tabler:calculator',
+  },
+  {
+    title: 'Statutory Audit',
+    description: `Professional statutory audit services for companies under the Companies Act 2013. Our thorough approach ensures compliance with regulatory requirements while providing valuable insights for business improvement.`,
+    icon: 'tabler:book',
+  },
+  {
+    title: 'Internal and Concurrent Audit',
+    description: `Systematic evaluation of internal controls, operational efficiency, and risk management through detailed internal audits. Our concurrent audit services provide real-time monitoring and compliance verification.`,
+    icon: 'tabler:chart-dots',
+  },
+  {
+    title: 'Bank and Government Audit',
+    description: `Specialized audit services for banking institutions and government organizations. We conduct thorough examinations of financial statements and operational processes in accordance with regulatory guidelines.`,
+    icon: 'tabler:building-bank',
+  },
+];
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+  <Hero2
+    tagline="Professional Audit Services"
+    title="Comprehensive Audit Solutions for Your Business"
+    subtitle="We provide thorough and professional audit services tailored to meet regulatory requirements and add value to your business operations."
+    actions={[
+      { variant: 'primary', text: 'Contact Us', href: '/contact' },
+      { text: 'Learn More', href: '#features' },
+    ]}
+  />
+
+  <!-- Features2 Widget ************** -->
+  <Features2
+    title="Our Audit Services"
+    subtitle="We offer a comprehensive range of audit services to meet your business needs"
+    items={features}
+  />
+
+  <div class="px-4 py-16 mx-auto max-w-6xl lg:py-20">
+    <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+      <p class="text-base text-gray-600 md:text-lg dark:text-slate-400">
+        Our team of experienced chartered accountants ensures the highest standards of professional service delivery. We
+        combine our expertise with modern audit methodologies to provide valuable insights that help improve your
+        business operations and ensure compliance with regulatory requirements.
+      </p>
+    </div>
+  </div>
+</Layout>
+

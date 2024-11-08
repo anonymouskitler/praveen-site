@@ -1,0 +1,66 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero2 from '~/components/widgets/Hero2.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+
+const metadata = {
+  title: 'NRI Services - Comprehensive Solutions for Non-Resident Indians',
+};
+
+const features = [
+  {
+    title: 'Obtaining Lower Tax Certificate',
+    description: `Expert assistance in obtaining lower tax certificates under Section 197/195. We help NRIs optimize their tax liability through proper documentation and application processes.`,
+    icon: 'tabler:certificate',
+  },
+  {
+    title: 'ITR Filing',
+    description: `Comprehensive income tax return filing services for NRIs, including reporting of global income, DTAA benefits, and foreign tax credits. We ensure compliance with Indian tax laws while maximizing benefits.`,
+    icon: 'tabler:file-text',
+  },
+  {
+    title: 'Repatriation of Funds',
+    description: `Professional guidance on repatriation of funds from India, ensuring compliance with FEMA regulations and RBI guidelines. We assist in documentation and necessary certifications.`,
+    icon: 'tabler:transfer',
+  },
+  {
+    title: 'Tax and TDS on Property Sale',
+    description: `Expert advisory on tax implications and TDS requirements for property transactions by NRIs. We provide comprehensive guidance on compliance requirements and tax optimization strategies.`,
+    icon: 'tabler:building',
+  },
+  {
+    title: 'Setting up Business in India',
+    description: `Complete assistance in establishing business presence in India, including entity selection, registration, compliance setup, and operational guidance for NRI entrepreneurs.`,
+    icon: 'tabler:briefcase',
+  },
+];
+---
+
+<Layout metadata={metadata}>
+  <Hero2
+    tagline="NRI Services"
+    title="Comprehensive Solutions for Non-Resident Indians"
+    subtitle="Expert financial and compliance services tailored for NRIs investing or doing business in India."
+    actions={[
+      { variant: 'primary', text: 'Contact Us', href: '/contact' },
+      { text: 'Learn More', href: '#features' },
+    ]}
+  />
+
+  <Features2
+    title="Our NRI Services"
+    subtitle="Specialized solutions for all your Indian financial and compliance needs"
+    items={features}
+  />
+
+  <div class="px-4 py-16 mx-auto max-w-6xl lg:py-20">
+    <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+      <p class="text-base text-gray-600 md:text-lg dark:text-slate-400">
+        We provide comprehensive services to help NRIs manage their Indian investments and comply with regulatory
+        requirements. Our team stays updated with the latest regulations to ensure smooth handling of all NRI-related
+        matters.
+      </p>
+    </div>
+  </div>
+</Layout>
+
