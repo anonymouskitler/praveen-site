@@ -1,6 +1,6 @@
 site:
   name: SRIPURAM PRAVEEN & CO
-  site: 'https://astrowind.vercel.app'
+  site: 'https://sripurampraveen.com'
   base: '/'
   trailingSlash: false
 
@@ -11,7 +11,7 @@ metadata:
   title:
     default: AstroWind
     template: '%s — AstroWind'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+  description: "\U0001F680 Financial Services in India & UAE."
   robots:
     index: true
     follow: true
