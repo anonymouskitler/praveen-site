@@ -1,0 +1,60 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+
+const metadata = {
+  title: 'Disclaimer',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero tagline="Legal" title="Disclaimer">
+    <Fragment slot="subtitle"> Please read this disclaimer carefully before using our services </Fragment>
+  </Hero>
+
+  <section class="px-4 py-16 sm:px-6 mx-auto lg:px-8 lg:py-20 max-w-4xl">
+    <div class="prose prose-lg max-w-4xl dark:prose-invert">
+      <h2>Professional Services Disclaimer</h2>
+      <p class="font-medium">
+        The information contained on this website merely provides details of our firm to persons who have shown interest
+        in knowing more about us and is not intended to solicit work or advertise our capabilities in any manner. The
+        information provided on this website is general in nature and should not be used as a basis of decision-making
+        without further professional advice. The third party site links are only provided for ready reference of the
+        users and we neither control their content nor undertake any responsibility regarding them.
+      </p>
+
+      <h3>No Professional Relationship</h3>
+      <p>
+        The use of this website does not establish a professional-client relationship. Professional services can only be
+        engaged through a formal written agreement between our firm and the client.
+      </p>
+
+      <h3>Financial and Tax Information</h3>
+      <p>
+        Any financial or tax information provided on this website is general in nature and may not be suitable for your
+        specific circumstances. Tax laws and regulations are complex and subject to change. You should consult with a
+        qualified professional before making any decisions based on this information.
+      </p>
+
+      <h3>Limitation of Liability</h3>
+      <p>
+        In no event shall our firm be liable for any loss or damage including without limitation, indirect or
+        consequential loss or damage, arising from loss of data or profits arising out of, or in connection with, the
+        use of this website.
+      </p>
+
+      <h3>External Links</h3>
+      <p>
+        This website may contain links to external websites. We have no control over the nature, content, and
+        availability of those sites. The inclusion of any links does not necessarily imply a recommendation or
+        endorsement of the views expressed within them.
+      </p>
+
+      <h3>Updates to Disclaimer</h3>
+      <p>
+        We reserve the right to make changes to this disclaimer at any time without notice. By using this website, you
+        agree to be bound by the then-current version of this disclaimer.
+      </p>
+    </div>
+  </section>
+</Layout>

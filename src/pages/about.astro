@@ -4,6 +4,7 @@ import Hero from '~/components/widgets/Hero.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import Steps2 from '~/components/widgets/Steps2.astro';
 import Layout from '~/layouts/PageLayout.astro';
+import Content from '~/components/widgets/Content.astro';
 
 const metadata = {
   title: 'About us',
@@ -43,25 +44,63 @@ const metadata = {
     ]}
   />
 
+  <!-- Features2 Widget ************** -->
+  <Content
+    isReversed
+    tagline="About Proprietor"
+    title="CA. SRIPURAM PRAVEEN"
+    items={[
+      {
+        title: 'Professional Background',
+        description: 'Ex-articled at Deloitte Haskins & Sells with expertise in accounting and auditing.',
+      },
+      {
+        title: 'Leadership',
+        description: 'Leading a dedicated team focused on delivering excellence in financial services since 2014.',
+      },
+      {
+        title: 'Business Philosophy',
+        description: 'Contributing to regional economic development through strategic business solutions.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/Pic.jpeg',
+      alt: 'CA. Sripuram Praveen',
+    }}
+  >
+    <!-- Remove the Fragment slot entirely -->
+  </Content>
+
   <!-- Steps2 Widget ****************** -->
 
   <Steps2
-    title="Professional Ethics"
-    subtitle="Our practice is guided by fundamental principles that ensure professional service delivery."
+    title="About Our Practice"
+    subtitle="Sripuram Praveen works with a team of professionals dedicated to excellence in financial services."
     items={[
       {
-        title: 'Professional Ethics',
+        title: 'Leadership & Expertise',
         description:
-          'We maintain the highest standards of professional ethics and confidentiality in all our client engagements.',
+          'With over a decade of experience in accounting and auditing, including professional tenure at Deloitte Haskins & Sells, we bring deep industry expertise to serve our clients.',
+      },
+      {
+        title: 'Our Commitment',
+        description:
+          'We focus on delivering high-quality professional services while maintaining the highest standards of ethics and confidentiality in all client engagements.',
+      },
+      {
+        title: 'Vision',
+        description:
+          'Our firm is dedicated to contributing to regional economic development through strategic business solutions and comprehensive financial services.',
       },
       {
         title: 'Professional Development',
         description:
-          'We maintain quality in our services through continuous professional development and staying updated with industry standards.',
+          'We maintain service excellence through continuous professional development and staying updated with industry standards.',
       },
       {
-        title: 'Client Service',
-        description: 'We focus on understanding specific requirements and providing appropriate professional services.',
+        title: 'Client-Centric Approach',
+        description:
+          'We prioritize understanding specific client requirements to provide tailored professional services that meet their unique needs.',
       },
     ]}
   />
@@ -86,21 +125,4 @@ const metadata = {
   />
 
   <!-- Features2 Widget ************** -->
-
-  <Features2
-    title="Contact Information"
-    columns={2}
-    items={[
-      {
-        title: 'Professional Consultation',
-        description: 'Contact us to discuss your requirements with our professional team.',
-        icon: 'tabler:messages',
-      },
-      {
-        title: 'Contact Details',
-        description: 'For any inquiries, please reach out through phone or email.',
-        icon: 'tabler:headset',
-      },
-    ]}
-  />
 </Layout>
