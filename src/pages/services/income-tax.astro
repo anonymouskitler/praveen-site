@@ -2,6 +2,7 @@
 import Layout from '~/layouts/PageLayout.astro';
 import Hero2 from '~/components/widgets/Hero2.astro';
 import Features2 from '~/components/widgets/Features2.astro';
+import Content from '~/components/widgets/Content.astro';
 
 const metadata = {
   title: 'Income Tax Services - Professional Tax Solutions',
@@ -43,14 +44,114 @@ const features = [
     items={features}
   />
 
+  <Content
+    isReversed={true}
+    items={[
+      {
+        title: 'Tax Return Filing Services',
+        description: 'Comprehensive ITR filing with maximum legitimate deductions',
+        icon: 'tabler:file-check',
+      },
+      {
+        title: 'Tax Planning & Advisory',
+        description: 'Strategic tax planning to optimize your tax position legally',
+        icon: 'tabler:chart-dots',
+      },
+      {
+        title: 'Tax Assessment Support',
+        description: 'Expert handling of tax scrutiny and assessments',
+        icon: 'tabler:search',
+      },
+      {
+        title: 'Tax Compliance Management',
+        description: 'Ensuring adherence to all tax regulations and deadlines',
+        icon: 'tabler:checklist',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Tax Services Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Comprehensive Tax Solutions</h3>
+    </Fragment>
+  </Content>
+
+  <Content
+    items={[
+      {
+        title: 'E-TDS/TCS Services',
+        description: 'Complete TDS compliance and reporting solutions',
+        icon: 'tabler:receipt-tax',
+      },
+      {
+        title: 'Form 16/16A Generation',
+        description: 'Timely preparation and issuance of tax certificates',
+        icon: 'tabler:certificate',
+      },
+      {
+        title: 'TDS Returns Correction',
+        description: 'Rectification of TDS returns and resolving defaults',
+        icon: 'tabler:edit',
+      },
+      {
+        title: 'Lower TDS Applications',
+        description: 'Assistance in obtaining lower tax deduction certificates',
+        icon: 'tabler:percentage',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'TDS Services Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">TDS Management Services</h3>
+    </Fragment>
+  </Content>
+
+  <Content
+    isReversed={true}
+    items={[
+      {
+        title: 'Tax Notice Resolution',
+        description: 'Expert handling of notices from tax authorities',
+        icon: 'tabler:mail-opened',
+      },
+      {
+        title: 'CIT(A) Appeals',
+        description: 'Professional representation before Commissioner Appeals',
+        icon: 'tabler:gavel',
+      },
+      {
+        title: 'ITAT Representation',
+        description: 'Specialized handling of tribunal proceedings',
+        icon: 'tabler:building-bank',
+      },
+      {
+        title: 'Settlement Commission',
+        description: 'Guidance and representation for tax settlements',
+        icon: 'tabler:file-check',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Tax Appeals Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Tax Dispute Resolution</h3>
+    </Fragment>
+  </Content>
+
   <div class="px-4 py-16 mx-auto max-w-6xl lg:py-20">
     <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
       <p class="text-base text-gray-600 md:text-lg dark:text-slate-400">
-        Our experienced team stays updated with the latest tax laws and regulations to provide you with accurate and
-        timely tax services. We focus on minimizing your tax liability while ensuring full compliance with Indian tax
-        laws.
+        Our experienced team of tax professionals is dedicated to providing comprehensive income tax services tailored
+        to your specific needs. We stay current with the latest tax laws and regulations to ensure optimal results while
+        maintaining strict compliance with Indian tax laws.
       </p>
     </div>
   </div>
 </Layout>
-

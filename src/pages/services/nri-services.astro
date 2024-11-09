@@ -2,6 +2,7 @@
 import Layout from '~/layouts/PageLayout.astro';
 import Hero2 from '~/components/widgets/Hero2.astro';
 import Features2 from '~/components/widgets/Features2.astro';
+import Content from '~/components/widgets/Content.astro';
 
 const metadata = {
   title: 'NRI Services - Comprehensive Solutions for Non-Resident Indians',
@@ -53,14 +54,120 @@ const features = [
     items={features}
   />
 
+  <Content
+    isReversed
+    items={[
+      {
+        title: 'Lower Tax Certificate Services',
+        description: `
+          • Application and documentation for Section 197/195 certificates
+          • Analysis of expected income and tax liability
+          • Representation before tax authorities
+          • Guidance on compliance requirements
+          • Regular status tracking and follow-up`,
+        icon: 'tabler:certificate',
+      },
+      {
+        title: 'Comprehensive ITR Filing',
+        description: `
+          • Filing of complex NRI tax returns
+          • DTAA benefit optimization
+          • Foreign income reporting
+          • Tax credit claims from foreign countries
+          • Capital gains computation and reporting`,
+        icon: 'tabler:file-text',
+      },
+      {
+        title: 'Fund Repatriation Services',
+        description: `
+          • RBI compliance documentation
+          • CA certificates for repatriation
+          • FEMA regulation adherence
+          • Banking channel assistance
+          • Tax clearance certificates`,
+        icon: 'tabler:transfer',
+      },
+      {
+        title: 'Property Transaction Advisory',
+        description: `
+          • TDS calculation and compliance
+          • Capital gains optimization
+          • Required documentation assistance
+          • FEMA compliance for property transactions
+          • Repatriation of sale proceeds`,
+        icon: 'tabler:building',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+      alt: 'NRI Services Features',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Detailed NRI Services</h3>
+    </Fragment>
+  </Content>
+
+  <Content
+    items={[
+      {
+        title: 'Business Setup Services',
+        description: `
+          • Entity structure consultation
+          • Company/LLP registration
+          • FEMA compliance setup
+          • RBI approvals and filings
+          • Tax registration assistance`,
+        icon: 'tabler:briefcase',
+      },
+      {
+        title: 'Investment Advisory',
+        description: `
+          • Portfolio investment guidance
+          • FEMA compliance for investments
+          • NRO/NRE/FCNR account assistance
+          • Investment structure optimization
+          • Regular compliance monitoring`,
+        icon: 'tabler:chart-pie',
+      },
+      {
+        title: 'Estate Planning',
+        description: `
+          • Will drafting and registration
+          • Trust formation and management
+          • Succession planning advice
+          • Asset transfer strategy
+          • Tax-efficient estate planning`,
+        icon: 'tabler:home-shield',
+      },
+      {
+        title: 'Ongoing Compliance Support',
+        description: `
+          • Annual compliance calendar
+          • Regular filing management
+          • Updates on regulatory changes
+          • Compliance health checks
+          • Query resolution support`,
+        icon: 'tabler:checklist',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80',
+      alt: 'Additional NRI Services Features',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Additional Services</h3>
+    </Fragment>
+  </Content>
+
   <div class="px-4 py-16 mx-auto max-w-6xl lg:py-20">
     <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
       <p class="text-base text-gray-600 md:text-lg dark:text-slate-400">
-        We provide comprehensive services to help NRIs manage their Indian investments and comply with regulatory
-        requirements. Our team stays updated with the latest regulations to ensure smooth handling of all NRI-related
-        matters.
+        Our comprehensive NRI services are designed to provide end-to-end solutions for all your Indian financial
+        matters. With our expert team's knowledge of both Indian and international regulations, we ensure smooth
+        handling of your investments, compliance requirements, and business operations in India.
       </p>
     </div>
   </div>
 </Layout>
-

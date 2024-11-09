@@ -2,6 +2,7 @@
 import Layout from '~/layouts/PageLayout.astro';
 import Hero2 from '~/components/widgets/Hero2.astro';
 import Features2 from '~/components/widgets/Features2.astro';
+import Content from '~/components/widgets/Content.astro';
 
 const metadata = {
   title: 'Business Reports & Analysis Services',
@@ -43,6 +44,110 @@ const features = [
     items={features}
   />
 
+  <Content
+    isReversed
+    items={[
+      {
+        title: 'CMA Data Preparation',
+        description:
+          'Comprehensive financial data preparation for bank loans including working capital assessment, ratio analysis, and industry benchmarking.',
+        icon: 'tabler:report-analytics',
+      },
+      {
+        title: 'Financial Projections',
+        description:
+          'Detailed month-wise projections of revenue, expenses, and cash flows based on historical data and growth plans.',
+        icon: 'tabler:chart-dots',
+      },
+      {
+        title: 'Stock Statements',
+        description:
+          'Regular preparation and monitoring of stock statements for working capital facilities with banks.',
+        icon: 'tabler:box',
+      },
+      {
+        title: 'Financial Analysis',
+        description: 'In-depth analysis of financial statements with key performance indicators and trend analysis.',
+        icon: 'tabler:chart-bar',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Financial Reports Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Bank Loan Documentation</h3>
+    </Fragment>
+  </Content>
+
+  <Content
+    items={[
+      {
+        title: 'Market Analysis',
+        description: 'Comprehensive market research, competitor analysis, and industry trends assessment.',
+        icon: 'tabler:chart-dots-2',
+      },
+      {
+        title: 'Technical Feasibility',
+        description: 'Assessment of technical requirements, infrastructure needs, and operational feasibility.',
+        icon: 'tabler:tools',
+      },
+      {
+        title: 'Financial Viability',
+        description: 'Detailed cost-benefit analysis, ROI calculations, and break-even analysis.',
+        icon: 'tabler:calculator',
+      },
+      {
+        title: 'Risk Assessment',
+        description: 'Identification and analysis of potential risks with mitigation strategies.',
+        icon: 'tabler:alert-triangle',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2015&q=80',
+      alt: 'Project Planning Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Project Reports</h3>
+    </Fragment>
+  </Content>
+
+  <Content
+    isReversed
+    items={[
+      {
+        title: 'Financial Modeling',
+        description: 'Custom financial models with sensitivity analysis and scenario planning capabilities.',
+        icon: 'tabler:math-function',
+      },
+      {
+        title: 'Budget Planning',
+        description: 'Detailed budget preparation with variance analysis and monitoring mechanisms.',
+        icon: 'tabler:calculator',
+      },
+      {
+        title: 'Cash Flow Forecasting',
+        description: 'Comprehensive cash flow projections with working capital management strategies.',
+        icon: 'tabler:cash',
+      },
+      {
+        title: 'Performance Metrics',
+        description: 'Development of KPIs and performance measurement systems for business monitoring.',
+        icon: 'tabler:chart-radar',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Financial Planning Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Financial Projections</h3>
+    </Fragment>
+  </Content>
+
   <div class="px-4 py-16 mx-auto max-w-6xl lg:py-20">
     <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
       <p class="text-base text-gray-600 md:text-lg dark:text-slate-400">
@@ -53,4 +158,3 @@ const features = [
     </div>
   </div>
 </Layout>
-

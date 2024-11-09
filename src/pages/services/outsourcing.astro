@@ -2,6 +2,7 @@
 import Layout from '~/layouts/PageLayout.astro';
 import Hero2 from '~/components/widgets/Hero2.astro';
 import Features2 from '~/components/widgets/Features2.astro';
+import Content from '~/components/widgets/Content.astro';
 
 const metadata = {
   title: 'Business Outsourcing Services',
@@ -48,6 +49,85 @@ const features = [
     items={features}
   />
 
+  <Content
+    isReversed={true}
+    items={[
+      {
+        title: 'Accounting Services',
+        description: 'Complete bookkeeping and financial management solutions',
+        icon: 'tabler:books',
+        items: [
+          'Daily bookkeeping and accounting entries',
+          'Bank reconciliation and ledger maintenance',
+          'Accounts receivable and payable management',
+          'Monthly/Quarterly financial statements preparation',
+          'GST return filing and compliance',
+          'Financial analysis and MIS reporting',
+        ],
+      },
+      {
+        title: 'Staffing Solutions',
+        description: 'Expert accounting and finance professionals for your team',
+        icon: 'tabler:users',
+        items: [
+          'Temporary and permanent staffing solutions',
+          'Skilled accountants and bookkeepers',
+          'Financial analysts and controllers',
+          'Payroll specialists',
+          'Tax professionals',
+          'Project-based accounting support',
+        ],
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-4.0.3',
+      alt: 'Accounting Services Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Financial Management Solutions</h3>
+    </Fragment>
+  </Content>
+
+  <Content
+    items={[
+      {
+        title: 'Payroll Services',
+        description: 'Comprehensive payroll processing and management',
+        icon: 'tabler:cash',
+        items: [
+          'End-to-end payroll processing',
+          'Statutory compliance management',
+          'Tax calculations and deductions',
+          'Employee benefits administration',
+          'Payslip generation and distribution',
+          'Leave and attendance management',
+        ],
+      },
+      {
+        title: 'CFO Services',
+        description: 'Strategic financial leadership and guidance',
+        icon: 'tabler:chart-dots',
+        items: [
+          'Financial strategy development',
+          'Budgeting and forecasting',
+          'Cash flow management',
+          'Financial risk assessment',
+          'Investment planning',
+          'Board meeting presentations',
+        ],
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3',
+      alt: 'CFO Services Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Strategic Financial Services</h3>
+    </Fragment>
+  </Content>
+
   <div class="px-4 py-16 mx-auto max-w-6xl lg:py-20">
     <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
       <p class="text-base text-gray-600 md:text-lg dark:text-slate-400">
@@ -58,4 +138,3 @@ const features = [
     </div>
   </div>
 </Layout>
-
