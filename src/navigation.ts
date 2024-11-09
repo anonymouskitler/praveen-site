@@ -80,10 +80,7 @@ export const footerData = {
     },
     {
       title: 'Locations',
-      links: [
-        { text: 'Palamaner Office', href: getPermalink('/contact#palamaner') },
-        { text: 'Bengaluru Office', href: getPermalink('/contact#bengaluru') },
-      ],
+      links: [{ text: 'Palamaner Office', href: getPermalink('/contact#palamaner') }],
     },
   ],
   secondaryLinks: [
