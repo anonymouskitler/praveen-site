@@ -1,34 +1,11 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 import Hero2 from '~/components/widgets/Hero2.astro';
-import Features2 from '~/components/widgets/Features2.astro';
+import Content from '~/components/widgets/Content.astro';
 
 const metadata = {
   title: 'Business Registration Services',
 };
-
-const features = [
-  {
-    title: 'GST Registration',
-    description: `Complete assistance in GST registration process including application filing, documentation, and liaison with tax authorities. We ensure smooth registration while ensuring compliance with GST regulations.`,
-    icon: 'tabler:receipt-tax',
-  },
-  {
-    title: 'MSME Registration',
-    description: `Expert guidance for MSME registration to help businesses access government schemes and benefits. We handle the entire registration process and documentation requirements.`,
-    icon: 'tabler:building-factory',
-  },
-  {
-    title: 'PAN & TAN Registration',
-    description: `Efficient processing of PAN (Permanent Account Number) and TAN (Tax Deduction Account Number) applications for individuals and businesses. We ensure accurate documentation and swift processing.`,
-    icon: 'tabler:id',
-  },
-  {
-    title: 'Digital Signature Certificate (DSC)',
-    description: `Complete assistance in obtaining Digital Signature Certificates for business compliance needs. We handle the application process and verification requirements for all classes of DSC.`,
-    icon: 'tabler:signature',
-  },
-];
 ---
 
 <Layout metadata={metadata}>
@@ -42,11 +19,84 @@ const features = [
     ]}
   />
 
-  <Features2
-    title="Our Registration Services"
-    subtitle="Complete solutions for all your business registration needs"
-    items={features}
-  />
+  <Content
+    isReversed={true}
+    items={[
+      {
+        title: 'GST Registration',
+        description: 'Complete GST registration assistance with expert guidance',
+        icon: 'tabler:receipt-tax',
+        items: [
+          'New GST registration for businesses',
+          'GST registration cancellation support',
+          'Amendment in existing GST registration',
+          'Registration for e-commerce operators',
+          'Non-resident GST registration',
+          'Processing of GST refund claims',
+        ],
+      },
+      {
+        title: 'MSME Registration',
+        description: 'Comprehensive MSME registration and support services',
+        icon: 'tabler:building-factory',
+        items: [
+          'Udyam Registration for micro, small & medium enterprises',
+          'Documentation and application processing',
+          'Guidance on MSME schemes and benefits',
+          'Registration renewal assistance',
+          'Profile updating and modifications',
+          'MSME compliance advisory',
+        ],
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+      alt: 'Registration Services Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Business Registrations</h3>
+    </Fragment>
+  </Content>
+
+  <Content
+    items={[
+      {
+        title: 'PAN & TAN Registration',
+        description: 'Efficient processing of tax registration documents',
+        icon: 'tabler:id',
+        items: [
+          'New PAN card application for individuals',
+          'Business PAN card registration',
+          'TAN registration for organizations',
+          'PAN card corrections and updates',
+          'Digital PAN card services',
+          'PAN-Aadhaar linking assistance',
+        ],
+      },
+      {
+        title: 'Digital Signature Certificate (DSC)',
+        description: 'Complete DSC application and renewal services',
+        icon: 'tabler:signature',
+        items: [
+          'Class 2 & Class 3 DSC procurement',
+          'DSC for foreign directors',
+          'DSC renewal services',
+          'USB token provision',
+          'Organization/Corporate DSC',
+          'DSC for government tender purposes',
+        ],
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=772&q=80',
+      alt: 'Additional Services Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Documentation Services</h3>
+    </Fragment>
+  </Content>
 
   <div class="px-4 py-16 mx-auto max-w-6xl lg:py-20">
     <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
@@ -57,4 +107,3 @@ const features = [
     </div>
   </div>
 </Layout>
-

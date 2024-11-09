@@ -2,6 +2,7 @@
 import Layout from '~/layouts/PageLayout.astro';
 import Hero2 from '~/components/widgets/Hero2.astro';
 import Features2 from '~/components/widgets/Features2.astro';
+import Content from '~/components/widgets/Content.astro';
 
 const metadata = {
   title: 'Certificate Attestation Services',
@@ -48,14 +49,149 @@ const features = [
     items={features}
   />
 
+  <Content
+    isReversed={true}
+    items={[
+      {
+        title: 'Net Worth Certificate Services',
+        description: 'Comprehensive net worth certification with detailed asset and liability verification.',
+        icon: 'tabler:certificate',
+      },
+      {
+        title: 'Documentation Support',
+        description: 'Assistance in collecting and organizing supporting documents for net worth verification.',
+        icon: 'tabler:files',
+      },
+      {
+        title: 'Asset Valuation',
+        description: 'Professional valuation of various assets including property, investments, and business holdings.',
+        icon: 'tabler:chart-dots',
+      },
+      {
+        title: 'Compliance Review',
+        description: 'Thorough review to ensure compliance with regulatory requirements and standards.',
+        icon: 'tabler:checklist',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-4.0.3',
+      alt: 'Net Worth Certificate Services',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Net Worth Certification</h3>
+    </Fragment>
+  </Content>
+
+  <Content
+    items={[
+      {
+        title: 'Capital Investment Verification',
+        description: 'Detailed verification and certification of capital investments in businesses.',
+        icon: 'tabler:cash',
+      },
+      {
+        title: 'Source Documentation',
+        description: 'Verification of source of funds and related documentation for capital infusion.',
+        icon: 'tabler:file-description',
+      },
+      {
+        title: 'Regulatory Compliance',
+        description: 'Ensuring compliance with RBI guidelines and other regulatory requirements.',
+        icon: 'tabler:gavel',
+      },
+      {
+        title: 'Transaction Authentication',
+        description: 'Authentication of capital transaction records and supporting documents.',
+        icon: 'tabler:certificate-2',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3',
+      alt: 'Capital Infusion Services',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Capital Infusion Certification</h3>
+    </Fragment>
+  </Content>
+
+  <Content
+    isReversed={true}
+    items={[
+      {
+        title: 'Sales Verification',
+        description: 'Comprehensive verification of sales data and revenue streams.',
+        icon: 'tabler:chart-bar',
+      },
+      {
+        title: 'Financial Analysis',
+        description: 'Detailed analysis of financial statements and supporting documents.',
+        icon: 'tabler:report-analytics',
+      },
+      {
+        title: 'Tender Documentation',
+        description: 'Specialized certification for tender requirements and submissions.',
+        icon: 'tabler:file-check',
+      },
+      {
+        title: 'Bank Submissions',
+        description: 'Professional certification for bank loan and credit facility requirements.',
+        icon: 'tabler:building-bank',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3',
+      alt: 'Turnover Certificate Services',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Turnover Certification</h3>
+    </Fragment>
+  </Content>
+
+  <Content
+    items={[
+      {
+        title: 'Income Certification',
+        description: 'Professional attestation of income from various sources for multiple purposes.',
+        icon: 'tabler:report-money',
+      },
+      {
+        title: 'Project Completion',
+        description: 'Verification and certification of project completion status and milestones.',
+        icon: 'tabler:trophy',
+      },
+      {
+        title: 'Business Certifications',
+        description: 'Specialized business certificates for various regulatory requirements.',
+        icon: 'tabler:certificate',
+      },
+      {
+        title: 'Custom Attestations',
+        description: 'Tailored attestation services based on specific client requirements.',
+        icon: 'tabler:file-certificate',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1554224155-1696413565d3?ixlib=rb-4.0.3',
+      alt: 'Other Attestation Services',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Additional Attestation Services
+      </h3>
+    </Fragment>
+  </Content>
+
   <div class="px-4 py-16 mx-auto max-w-6xl lg:py-20">
     <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
       <p class="text-base text-gray-600 md:text-lg dark:text-slate-400">
-        Our attestation services ensure compliance with regulatory requirements while maintaining the highest standards
-        of professional integrity. We provide quick and reliable certification services backed by thorough verification
-        processes.
+        Our attestation services are backed by years of expertise and a thorough understanding of regulatory
+        requirements. We ensure each certification meets the highest standards of accuracy and compliance while
+        maintaining strict confidentiality.
       </p>
     </div>
   </div>
 </Layout>
-

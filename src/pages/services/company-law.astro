@@ -2,6 +2,7 @@
 import Layout from '~/layouts/PageLayout.astro';
 import Hero2 from '~/components/widgets/Hero2.astro';
 import Features2 from '~/components/widgets/Features2.astro';
+import Content from '~/components/widgets/Content.astro';
 
 const metadata = {
   title: 'Company Law Services - Corporate Compliance Solutions',
@@ -15,7 +16,7 @@ const features = [
   },
   {
     title: 'Annual Returns Filing',
-    description: `Timely preparation and filing of annual returns and other statutory forms with the ROC. We handle DIR-3 KYC, DPT returns, and all mandatory filings under the Companies Act 2013.`,
+    description: `Timely preparation and filing of annual returns and other statutory forms with the ROC. We handle DIR-3 KYC, DPT returns, and all mandatory filings under the Companies Act, 2013.`,
     icon: 'tabler:calendar-stats',
   },
   {
@@ -43,13 +44,85 @@ const features = [
     items={features}
   />
 
+  <Content
+    isReversed={true}
+    items={[
+      {
+        title: 'Company Formation & Registration',
+        description:
+          'Complete assistance in company incorporation, including name availability, documentation preparation, and ROC filing.',
+        icon: 'tabler:building-factory',
+      },
+      {
+        title: 'Statutory Compliance Management',
+        description:
+          'Regular monitoring and timely compliance of all statutory requirements under Companies Act, 2013.',
+        icon: 'tabler:clipboard-check',
+      },
+      {
+        title: 'Obtaining Director Identification Number (DIN)',
+        description: 'Expert guidance in obtaining DIN for directors of companies.',
+        icon: 'tabler:arrows-shuffle',
+      },
+      {
+        title: 'Legal Documentation',
+        description: 'Preparation and maintenance of legal documents, agreements, and corporate contracts.',
+        icon: 'tabler:file-certificate',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80',
+      alt: 'Corporate Services Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Primary Services</h3>
+    </Fragment>
+  </Content>
+
+  <Content
+    items={[
+      {
+        title: 'Board Meeting Management',
+        description: 'Organizing and documenting board meetings, preparing agendas, and maintaining minutes.',
+        icon: 'tabler:users-group',
+      },
+      {
+        title: 'Regulatory Filings',
+        description: 'Handling all mandatory filings with ROC, including annual returns and compliance certificates.',
+        icon: 'tabler:file-upload',
+      },
+      {
+        title: 'Share Management',
+        description: 'Managing share transfers, allotments, and maintaining shareholder records.',
+        icon: 'tabler:chart-pie',
+      },
+      {
+        title: 'Corporate Advisory',
+        description: 'Strategic advice on corporate governance, compliance, and regulatory matters.',
+        icon: 'tabler:bulb',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1664575602554-2087b04935a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Additional Services Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Additional Services</h3>
+    </Fragment>
+  </Content>
+
   <div class="px-4 py-16 mx-auto max-w-6xl lg:py-20">
     <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+      <h2 class="text-3xl font-bold tracking-tight sm:text-4xl sm:leading-none mb-8">
+        Why Choose Our Company Law Services?
+      </h2>
       <p class="text-base text-gray-600 md:text-lg dark:text-slate-400">
-        Our team of experts ensures your company maintains perfect compliance with all statutory requirements under the
-        Companies Act. We provide timely updates and professional guidance for all your corporate governance needs.
+        Our experienced team of company law experts provides comprehensive corporate compliance solutions tailored to
+        your business needs. We ensure timely compliance, maintain accurate records, and offer strategic guidance to
+        help your business grow while staying compliant with all regulatory requirements.
       </p>
     </div>
   </div>
 </Layout>
-

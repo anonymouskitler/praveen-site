@@ -1,8 +1,8 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
-import Header from '~/components/widgets/Header.astro';
 import Hero2 from '~/components/widgets/Hero2.astro';
 import Features2 from '~/components/widgets/Features2.astro';
+import Content from '~/components/widgets/Content.astro';
 
 const metadata = {
   title: 'Audit Services - Professional Audit Solutions',
@@ -11,12 +11,12 @@ const metadata = {
 const features = [
   {
     title: 'Tax Audits Under Income Tax Act',
-    description: `Comprehensive tax audit services under Section 44AB of the Income Tax Act for businesses with turnover exceeding prescribed limits. We ensure compliance with tax laws while identifying potential tax-saving opportunities.`,
+    description: `Comprehensive tax audit services under Section 44AB of the Income Tax Act, 1961 for businesses with turnover exceeding prescribed limits. We ensure compliance with tax laws while identifying potential tax-saving opportunities.`,
     icon: 'tabler:calculator',
   },
   {
     title: 'Statutory Audit',
-    description: `Professional statutory audit services for companies under the Companies Act 2013. Our thorough approach ensures compliance with regulatory requirements while providing valuable insights for business improvement.`,
+    description: `Professional statutory audit services for companies under the Companies Act, 2013. Our thorough approach ensures compliance with regulatory requirements while providing valuable insights for business improvement.`,
     icon: 'tabler:book',
   },
   {
@@ -24,10 +24,11 @@ const features = [
     description: `Systematic evaluation of internal controls, operational efficiency, and risk management through detailed internal audits. Our concurrent audit services provide real-time monitoring and compliance verification.`,
     icon: 'tabler:chart-dots',
   },
+
   {
-    title: 'Bank and Government Audit',
-    description: `Specialized audit services for banking institutions and government organizations. We conduct thorough examinations of financial statements and operational processes in accordance with regulatory guidelines.`,
-    icon: 'tabler:building-bank',
+    title: 'Stock Audit',
+    description: `Comprehensive stock and inventory verification services for banks, financial institutions, and businesses. We ensure accurate valuation and reporting of inventory while identifying potential discrepancies and control improvements.`,
+    icon: 'tabler:box',
   },
 ];
 ---
@@ -51,6 +52,149 @@ const features = [
     items={features}
   />
 
+  <!-- Detailed Tax Audit Section -->
+  <Content
+    isReversed
+    items={[
+      {
+        title: 'Tax Audit Compliance',
+        description: 'Thorough review of books of accounts and tax positions',
+        icon: 'tabler:file-check',
+      },
+      {
+        title: 'Documentation Review',
+        description: 'Verification of supporting documents and compliance certificates',
+        icon: 'tabler:files',
+      },
+      {
+        title: 'Tax Planning Insights',
+        description: 'Identification of tax-saving opportunities and risk areas',
+        icon: 'tabler:bulb',
+      },
+      {
+        title: 'Form 3CD Preparation',
+        description: 'Detailed preparation and filing of Tax Audit Report within prescribed timelines',
+        icon: 'tabler:report',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-4.0.3',
+      alt: 'Tax Audit Services',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Tax Audit Services</h3>
+    </Fragment>
+  </Content>
+
+  <!-- Statutory Audit Section -->
+  <Content
+    items={[
+      {
+        title: 'Financial Statement Review',
+        description: 'Comprehensive analysis of financial statements and accounting policies',
+        icon: 'tabler:report-money',
+      },
+      {
+        title: 'Compliance Verification',
+        description: 'Assessment of compliance with Companies Act, 2013 requirements',
+        icon: 'tabler:checklist',
+      },
+      {
+        title: 'Internal Controls Evaluation',
+        description: 'Review of internal control systems and risk assessment',
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Statutory Reporting',
+        description: 'Preparation of detailed audit reports and certificates',
+        icon: 'tabler:file-certificate',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3',
+      alt: 'Statutory Audit Services',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Statutory Audit Services</h3>
+    </Fragment>
+  </Content>
+
+  <!-- Internal Audit Section -->
+  <Content
+    isReversed
+    items={[
+      {
+        title: 'Process Evaluation',
+        description: 'Detailed assessment of business processes and workflows',
+        icon: 'tabler:arrows-right-left',
+      },
+      {
+        title: 'Risk Management',
+        description: 'Identification and evaluation of business risks',
+        icon: 'tabler:shield-lock',
+      },
+      {
+        title: 'Operational Efficiency',
+        description: 'Analysis of operational effectiveness and recommendations',
+        icon: 'tabler:chart-arrows',
+      },
+      {
+        title: 'Compliance Monitoring',
+        description: 'Regular monitoring of regulatory compliance',
+        icon: 'tabler:eye-check',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3',
+      alt: 'Internal Audit Services',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Internal & Concurrent Audit</h3>
+    </Fragment>
+  </Content>
+
+  <!-- Stock Audit Section -->
+  <Content
+    isReversed
+    items={[
+      {
+        title: 'Physical Verification',
+        description:
+          'Comprehensive physical verification of inventory and stock items with detailed counting and reconciliation',
+        icon: 'tabler:clipboard-list',
+      },
+      {
+        title: 'Valuation Assessment',
+        description:
+          'Expert evaluation of inventory valuation methods and verification of stock values as per accounting standards',
+        icon: 'tabler:calculator',
+      },
+      {
+        title: 'Storage & Systems Review',
+        description: 'Assessment of storage conditions, inventory management systems, and stock movement procedures',
+        icon: 'tabler:building-warehouse',
+      },
+      {
+        title: 'Stock Monitoring',
+        description:
+          'Analysis of slow-moving, non-moving, and obsolete inventory with recommendations for optimization',
+        icon: 'tabler:chart-bar',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1553413077-190dd305871c?ixlib=rb-4.0.3',
+      alt: 'Stock Audit Services',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Stock Audit Services</h3>
+    </Fragment>
+  </Content>
+
+  <!-- Closing section -->
   <div class="px-4 py-16 mx-auto max-w-6xl lg:py-20">
     <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
       <p class="text-base text-gray-600 md:text-lg dark:text-slate-400">
@@ -61,4 +205,3 @@ const features = [
     </div>
   </div>
 </Layout>
-
