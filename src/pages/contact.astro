@@ -14,38 +14,58 @@ const metadata = {
 
   <HeroText tagline="Contact Us" title="Let's Discuss Your Financial Goals" />
 
-  <ContactUs
-    id="form"
-    title="Get in Touch"
-    subtitle="Whether you need assistance with audits, tax planning, or company law matters, our team of experts is here to help. We'll get back to you promptly to discuss how we can support your business needs."
-    inputs={[
-      {
-        type: 'text',
-        name: 'name',
-        label: 'Name',
-      },
-      {
-        type: 'email',
-        name: 'email',
-        label: 'Email',
-      },
-      {
-        type: 'tel',
-        name: 'phone',
-        label: 'Phone',
-      },
-    ]}
-    textarea={{
-      label: 'How can we help you?',
-    }}
-    disclaimer={{
-      label:
-        'By submitting this form, you agree to the collection of your information. We respect your privacy and will handle your data securely.',
-    }}
-    description="Our team typically responds within 1 business day."
-    data-netlify="true"
-    name="contact"
-  />
+  <!-- Replacing ContactUs with Cal.com widget -->
+  <div class="container mx-auto px-4 py-8">
+    <div class="mb-8 text-center">
+      <h2 class="text-3xl font-bold">Let's Connect</h2>
+      <p class="mt-4 text-gray-600">Choose a convenient time to discuss how we can support your business needs.</p>
+    </div>
+
+    <div style="width: 100%; min-height: 700px; overflow: scroll" id="my-cal-inline"></div>
+    <script type="text/javascript">
+      (function (C, A, L) {
+        let p = function (a, ar) {
+          a.q.push(ar);
+        };
+        let d = C.document;
+        C.Cal =
+          C.Cal ||
+          function () {
+            let cal = C.Cal;
+            let ar = arguments;
+            if (!cal.loaded) {
+              cal.ns = {};
+              cal.q = cal.q || [];
+              d.head.appendChild(d.createElement('script')).src = A;
+              cal.loaded = true;
+            }
+            if (ar[0] === L) {
+              const api = function () {
+                p(api, arguments);
+              };
+              const namespace = ar[1];
+              api.q = api.q || [];
+              if (typeof namespace === 'string') {
+                cal.ns[namespace] = cal.ns[namespace] || api;
+                p(cal.ns[namespace], ar);
+                p(cal, ['initNamespace', namespace]);
+              } else p(cal, ar);
+              return;
+            }
+            p(cal, ar);
+          };
+      })(window, 'https://app.cal.com/embed/embed.js', 'init');
+      Cal('init', { origin: 'https://app.cal.com' });
+
+      Cal('inline', {
+        elementOrSelector: '#my-cal-inline',
+        calLink: 'sripuram-praveen',
+        config: {
+          theme: 'light',
+        },
+      });
+    </script>
+  </div>
 
   <!-- Features2 Widget ************** -->
 
